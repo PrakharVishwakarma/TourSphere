@@ -1,0 +1,91 @@
+
+
+.navbar{
+    background-color: rgb(85, 85, 249);
+    height: 3.65rem;
+}
+
+/* Icon */
+.fa-meteor{
+    color: rgb(85, 85, 249);
+}
+
+.nav-link{
+    color: white !important;
+}
+
+.logoCotainer {
+    border: 1px solid black;
+    border-radius: 50%;
+    background-color: white;
+}
+.logoCotainer a{
+    margin: 0.5rem 0.65rem;
+}
+
+.footerBar{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(209, 205, 205);
+    align-items: center;
+    height: 10rem;
+    padding: 0.75rem;
+    height: 15rem;
+}
+.f-info-socials{
+    font-size: 1.5rem;
+
+}
+.f-info-socials i{
+    margin-left: 1.5rem;
+}
+
+.f-info-links {
+    text-decoration: none;
+}
+.f-info-links a{
+    text-decoration: none;
+    color: black;
+    margin-left: 1.5rem;
+}
+.f-info-links a:hover{
+    text-decoration: underline;
+    color: rgb(73, 43, 226);
+
+}
+
+.priceAndShowBox{
+    display: flex;
+}
+.priceAndShowBox a{
+    align-self: start;
+}
+.priceAndShowBox div{
+    text-align: center;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn-primary{
+    width: 50%;   
+}
+
+.card{
+    border: none;
+    margin-top: 2rem;
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100%;
+    object-fit: cover !important; 
+    height: 20rem;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+

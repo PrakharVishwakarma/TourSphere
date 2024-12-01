@@ -1,0 +1,79 @@
+<% layout("/layouts/boilerplate") %>
+
+
+
+<!-- <h3>All Listings</h3> -->
+
+<!--         
+<form method="GET" action="/listings/new">
+<button>Create New Listing</button>
+</form> 
+-->
+
+<div id="filters">
+    <div class="filter">
+        <p style="margin-bottom: 0; font-size: 1.1rem">Trending</p>
+        <div><i class="fa-solid fa-fire" style="font-size: 1.5rem;"></i></div>
+    </div>
+    <div class="filter">
+        <p style="margin-bottom: 0; font-size: 1.1rem">Mountains</p>
+        <div><i class="fa-solid fa-mountain-sun" style="font-size: 1.5rem";></i></div>
+    </div>
+    <div class="filter">
+        <p style="margin-bottom: 0; font-size: 1.1rem">Mount City</p>
+        <div><i class="fa-solid fa-mountain-city" style="font-size: 1.5rem";></i></div>
+    </div>
+    <div class="filter">
+        <p style="margin-bottom: 0; font-size: 1.1rem">Hikiing</p>
+        <div><i class="fa-solid fa-person-hiking" style="font-size: 1.5rem";></i></div>
+    </div>
+    <div class="filter">
+        <p style="margin-bottom: 0; font-size: 1.1rem">Skiing</p>
+        <div><i class="fa-solid fa-person-skiing" style="font-size: 1.5rem";></i></div>
+    </div>
+    <div class="filter">
+        <p style="margin-bottom: 0; font-size: 1.1rem">Pools</p>
+        <div><i class="fa-solid fa-person-swimming" style="font-size: 1.5rem";></i></div>
+    </div>
+    <div class="filter">
+        <p style="margin-bottom: 0; font-size: 1.1rem">Cafe</p>
+        <div><i class="fa-solid fa-burger" style="font-size: 1.5rem";></i></div>
+    </div>
+    <div class="filter">
+        <p style="margin-bottom: 0; font-size: 1.1rem">Hotels</p>
+        <div><i class="fa-solid fa-hotel" style="font-size: 1.5rem";></i></div>
+    </div>
+    <div class="filter">
+        <p style="margin-bottom: 0; font-size: 1.1rem">Nighout</p>
+        <div><i class="fa-solid fa-cloud-moon" style="font-size: 1.5rem";></i></div>
+    </div>
+    <div class="filter">
+        <p style="margin-bottom: 0; font-size: 1.1rem">MetroCity</p>
+        <div><i class="fa-solid fa-city" style="font-size: 1.5rem";></i></div>
+    </div>
+    <div class="filter">
+        <p style="margin-bottom: 0; font-size: 1.1rem">Malls</p>
+        <div><i class="fa-solid fa-cart-shopping" style="font-size: 1.5rem";></i></div>
+    </div>
+
+</div>
+<div class="row row-cols-lg-3 row row-cols-md-2 row row-cols-sm-1">
+    <% for(let listing of allListings) { %>
+        <div class="card col">
+            <img src="<%=listing.image.url%>" class="card-img-top" alt="listing Image"> 
+
+            <div class="card-body">
+                <h5 class="card-title"><%= listing.title %></h5>
+                <p class="card-text"><%= listing.description %></p>
+                <div class="priceAndShowBox">
+                    <a href="/listings/<%= listing._id%>" class="btn btn-primary">See place</a>
+                    <div>&#8377; <%= listing.price.toLocaleString("en-IN") %></div>
+                </div>
+            </div>
+
+        </div>
+    <% } %>
+</div>
+
+
+
